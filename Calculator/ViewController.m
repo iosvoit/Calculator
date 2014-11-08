@@ -14,90 +14,93 @@
 
 @implementation ViewController
 
+- (IBAction)number1:(id)sender
+{
+    self.selectNumber = self.selectNumber * 10;
+    self.selectNumber = self.selectNumber + 1;
+    self.screen.text = [NSString stringWithFormat:@"%i", self.selectNumber];
+}
 
+- (IBAction)number2:(id)sender
+{
+    self.selectNumber = self.selectNumber * 10;
+    self.selectNumber = self.selectNumber + 2;
+    self.screen.text = [NSString stringWithFormat:@"%i", self.selectNumber];
+}
 
-- (IBAction) Number1:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 1;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-    
+- (IBAction)number3:(id)sender
+{
+    self.selectNumber = self.selectNumber * 10;
+    self.selectNumber = self.selectNumber + 3;
+    self.screen.text = [NSString stringWithFormat:@"%i", self.selectNumber];
 }
-- (IBAction) Number2:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 2;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-    
+
+- (IBAction)number4:(id)sender
+{
+    self.selectNumber = self.selectNumber * 10;
+    self.selectNumber = self.selectNumber + 4;
+    self.screen.text = [NSString stringWithFormat:@"%i", self.selectNumber];
 }
-- (IBAction) Number3:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 3;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
+
+- (IBAction)number5:(id)sender
+{
+    self.selectNumber = self.selectNumber * 10;
+    self.selectNumber = self.selectNumber + 5;
+    self.screen.text = [NSString stringWithFormat:@"%i", self.selectNumber];
 }
-- (IBAction) Number4:(id)sender{
- 
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 4;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
+
+- (IBAction)number6:(id)sender
+{
+    self.selectNumber = self.selectNumber * 10;
+    self.selectNumber = self.selectNumber + 6;
+    self.screen.text = [NSString stringWithFormat:@"%i", self.selectNumber];
 }
-- (IBAction) Number5:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 5;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
+
+- (IBAction)number7:(id)sender
+{
+    self.selectNumber = self.selectNumber * 10;
+    self.selectNumber = self.selectNumber + 7;
+    self.screen.text = [NSString stringWithFormat:@"%i", self.selectNumber];
 }
-- (IBAction) Number6:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 6;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
+
+- (IBAction)number8:(id)sender
+{
+    self.selectNumber = self.selectNumber * 10;
+    self.selectNumber = self.selectNumber + 8;
+    self.screen.text = [NSString stringWithFormat:@"%i", self.selectNumber];
 }
-- (IBAction) Number7:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 7;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-    
+
+- (IBAction)number9:(id)sender
+{
+    self.selectNumber = self.selectNumber * 10;
+    self.selectNumber = self.selectNumber + 9;
+    self.screen.text = [NSString stringWithFormat:@"%i", self.selectNumber];
 }
-- (IBAction) Number8:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 8;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
+
+- (IBAction)number0:(id)sender
+{
+    self.selectNumber = self.selectNumber * 10;
+    self.selectNumber = self.selectNumber + 0;
+    self.screen.text = [NSString stringWithFormat:@"%i", self.selectNumber];
 }
-- (IBAction) Number9:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 9;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-}
-- (IBAction) Number0:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 0;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-}
-- (IBAction) Times:(id)sender{
-    
-    if (RunningTotal ==0) {
-        RunningTotal = SelectNumber;
-    }
-    
-    else{
-        switch (method) {
+
+- (IBAction)times:(id)sender
+{
+    if (self.runningTotal == 0) {
+        self.runningTotal = self.selectNumber;
+    } else {
+        switch (self.method) {
             case 1:
-                RunningTotal = RunningTotal * SelectNumber;
+                self.runningTotal = self.runningTotal * self.selectNumber;
                 break;
             case 2:
-                RunningTotal = RunningTotal / SelectNumber;
+                self.runningTotal = self.runningTotal / self.selectNumber;
                 break;
             case 3:
-                RunningTotal = RunningTotal - SelectNumber;
+                self.runningTotal = self.runningTotal - self.selectNumber;
                 break;
             case 4:
-                RunningTotal = RunningTotal + SelectNumber;
+                self.runningTotal = self.runningTotal + self.selectNumber;
                 break;
                 
             default:
@@ -105,30 +108,27 @@
         }
     }
     
-    method = 1;
-    SelectNumber = 0;
-    
-    
-    
+    self.method = 1;
+    self.selectNumber = 0;
 }
-- (IBAction) Divide:(id)sender{
-    if (RunningTotal ==0) {
-        RunningTotal = SelectNumber;
-    }
-    
-    else{
-        switch (method) {
+
+- (IBAction)divide:(id)sender
+{
+    if (self.runningTotal == 0) {
+        self.runningTotal = self.selectNumber;
+    } else {
+        switch (self.method) {
             case 1:
-                RunningTotal = RunningTotal * SelectNumber;
+                self.runningTotal = self.runningTotal * self.selectNumber;
                 break;
             case 2:
-                RunningTotal = RunningTotal / SelectNumber;
+                self.runningTotal = self.runningTotal / self.selectNumber;
                 break;
             case 3:
-                RunningTotal = RunningTotal - SelectNumber;
+                self.runningTotal = self.runningTotal - self.selectNumber;
                 break;
             case 4:
-                RunningTotal = RunningTotal + SelectNumber;
+                self.runningTotal = self.runningTotal + self.selectNumber;
                 break;
                 
             default:
@@ -136,29 +136,27 @@
         }
     }
     
-    
-    method = 2;
-    SelectNumber = 0;
+    self.method = 2;
+    self.selectNumber = 0;
 }
 
-- (IBAction) Substruct:(id)sender{
-    if (RunningTotal ==0) {
-        RunningTotal = SelectNumber;
-    }
-    
-    else{
-        switch (method) {
+- (IBAction)substruct:(id)sender
+{
+    if (self.runningTotal == 0) {
+        self.runningTotal = self.selectNumber;
+    } else {
+        switch (self.method) {
             case 1:
-                RunningTotal = RunningTotal * SelectNumber;
+                self.runningTotal = self.runningTotal * self.selectNumber;
                 break;
             case 2:
-                RunningTotal = RunningTotal / SelectNumber;
+                self.runningTotal = self.runningTotal / self.selectNumber;
                 break;
             case 3:
-                RunningTotal = RunningTotal - SelectNumber;
+                self.runningTotal = self.runningTotal - self.selectNumber;
                 break;
             case 4:
-                RunningTotal = RunningTotal + SelectNumber;
+                self.runningTotal = self.runningTotal + self.selectNumber;
                 break;
                 
             default:
@@ -166,54 +164,55 @@
         }
     }
     
-    method = 3;
-    SelectNumber = 0;
+    self.method = 3;
+    self.selectNumber = 0;
 }
-- (IBAction) Plus:(id)sender{
-    if (RunningTotal == 0) {
-        RunningTotal = SelectNumber;
-    }
-    
-    else{
-        switch (method) {
+
+- (IBAction)plus:(id)sender
+{
+    if (self.runningTotal == 0) {
+        self.runningTotal = self.selectNumber;
+    } else {
+        switch (self.method) {
             case 1:
-                RunningTotal = RunningTotal * SelectNumber;
+                self.runningTotal = self.runningTotal * self.selectNumber;
                 break;
             case 2:
-                RunningTotal = RunningTotal / SelectNumber;
+                self.runningTotal = self.runningTotal / self.selectNumber;
                 break;
             case 3:
-                RunningTotal = RunningTotal - SelectNumber;
+                self.runningTotal = self.runningTotal - self.selectNumber;
                 break;
             case 4:
-                RunningTotal = RunningTotal + SelectNumber;
+                self.runningTotal = self.runningTotal + self.selectNumber;
                 break;
                 
             default:
                 break;
         }
     }
-    method = 4;
-    SelectNumber = 0;
-}
-- (IBAction) Equals:(id)sender{
-    if (RunningTotal ==0) {
-        RunningTotal = SelectNumber;
-    }
     
-    else{
-        switch (method) {
+    self.method = 4;
+    self.selectNumber = 0;
+}
+
+- (IBAction)equals:(id)sender
+{
+    if (self.runningTotal == 0) {
+        self.runningTotal = self.selectNumber;
+    } else {
+        switch (self.method) {
             case 1:
-                RunningTotal = RunningTotal * SelectNumber;
+                self.runningTotal = self.runningTotal * self.selectNumber;
                 break;
             case 2:
-                RunningTotal = RunningTotal / SelectNumber;
+                self.runningTotal = self.runningTotal / self.selectNumber;
                 break;
             case 3:
-                RunningTotal = RunningTotal - SelectNumber;
+                self.runningTotal = self.runningTotal - self.selectNumber;
                 break;
             case 4:
-                RunningTotal = RunningTotal + SelectNumber;
+                self.runningTotal = self.runningTotal + self.selectNumber;
                 break;
                 
             default:
@@ -221,26 +220,18 @@
                 
         }
     }
-
     
-    Screen.text = [NSString stringWithFormat:@"%.2f", RunningTotal];
-    
-    
-    
-}
-- (IBAction) AllClear:(id)sender{
-    
-    
-    method = 0;
-    RunningTotal = 0;
-    SelectNumber = 0;
-    
-    Screen.text = [NSString stringWithFormat:@"0"];
-
+    self.screen.text = [NSString stringWithFormat:@"%.2f", self.runningTotal];
 }
 
-
-s
+- (IBAction)allClear:(id)sender
+{
+    self.method = 0;
+    self.runningTotal = 0;
+    self.selectNumber = 0;
+    
+    self.screen.text = [NSString stringWithFormat:@"0"];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

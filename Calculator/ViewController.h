@@ -8,34 +8,29 @@
 
 #import <UIKit/UIKit.h>
 
-int method;
-int SelectNumber;
-float RunningTotal;
-
 @interface ViewController : UIViewController
 
-{
-    
-    IBOutlet UILabel *Screen;
-}
+@property (assign, nonatomic) int method;
+@property (assign, nonatomic) int selectNumber;
+@property (assign, nonatomic) float runningTotal;
+@property (weak, nonatomic) IBOutlet UILabel *screen;
 
-- (IBAction) Number1:(id)sender;
-- (IBAction) Number2:(id)sender;
-- (IBAction) Number3:(id)sender;
-- (IBAction) Number4:(id)sender;
-- (IBAction) Number5:(id)sender;
-- (IBAction) Number6:(id)sender;
-- (IBAction) Number7:(id)sender;
-- (IBAction) Number8:(id)sender;
-- (IBAction) Number9:(id)sender;
-- (IBAction) Number0:(id)sender;
-- (IBAction) Times:(id)sender;
-- (IBAction) Divide:(id)sender;
-- (IBAction) Substruct:(id)sender;
-- (IBAction) Plus:(id)sender;
-- (IBAction) Equals:(id)sender;
-- (IBAction) AllClear:(id)sender;
-
+- (IBAction)number1:(id)sender;
+- (IBAction)number2:(id)sender;
+- (IBAction)number3:(id)sender;
+- (IBAction)number4:(id)sender;
+- (IBAction)number5:(id)sender;
+- (IBAction)number6:(id)sender;
+- (IBAction)number7:(id)sender;
+- (IBAction)number8:(id)sender;
+- (IBAction)number9:(id)sender;
+- (IBAction)number0:(id)sender;
+- (IBAction)times:(id)sender;
+- (IBAction)divide:(id)sender;
+- (IBAction)substruct:(id)sender;
+- (IBAction)plus:(id)sender;
+- (IBAction)equals:(id)sender;
+- (IBAction)allClear:(id)sender;
 
 @end
 
