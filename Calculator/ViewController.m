@@ -86,7 +86,7 @@
     }
     
     else{
-        switch (Method) {
+        switch (method) {
             case 1:
                 RunningTotal = RunningTotal * SelectNumber;
                 break;
@@ -105,7 +105,7 @@
         }
     }
     
-    Method = 1;
+    method = 1;
     SelectNumber = 0;
     
     
@@ -117,7 +117,7 @@
     }
     
     else{
-        switch (Method) {
+        switch (method) {
             case 1:
                 RunningTotal = RunningTotal * SelectNumber;
                 break;
@@ -137,7 +137,7 @@
     }
     
     
-    Method = 2;
+    method = 2;
     SelectNumber = 0;
 }
 
@@ -147,7 +147,7 @@
     }
     
     else{
-        switch (Method) {
+        switch (method) {
             case 1:
                 RunningTotal = RunningTotal * SelectNumber;
                 break;
@@ -166,7 +166,7 @@
         }
     }
     
-    Method = 3;
+    method = 3;
     SelectNumber = 0;
 }
 - (IBAction) Plus:(id)sender{
@@ -175,7 +175,7 @@
     }
     
     else{
-        switch (Method) {
+        switch (method) {
             case 1:
                 RunningTotal = RunningTotal * SelectNumber;
                 break;
@@ -193,7 +193,7 @@
                 break;
         }
     }
-    Method = 4;
+    method = 4;
     SelectNumber = 0;
 }
 - (IBAction) Equals:(id)sender{
@@ -202,7 +202,7 @@
     }
     
     else{
-        switch (Method) {
+        switch (method) {
             case 1:
                 RunningTotal = RunningTotal * SelectNumber;
                 break;
@@ -231,7 +231,7 @@
 - (IBAction) AllClear:(id)sender{
     
     
-    Method = 0;
+    method = 0;
     RunningTotal = 0;
     SelectNumber = 0;
     
@@ -240,7 +240,7 @@
 }
 
 
-
+s
 
 - (void)viewDidLoad {
     [super viewDidLoad];
